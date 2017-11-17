@@ -1,5 +1,5 @@
 /** global */
-html,body,div,span,h1,h2,p,form,{
+html,body,div,span,h1,h2,p,form{
 	margin: 0;
 	padding: 0;
 	border: 0;
