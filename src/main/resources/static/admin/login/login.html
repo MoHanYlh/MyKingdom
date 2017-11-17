@@ -3,39 +3,32 @@
 
 <head>
 	<title>MyKindom</title>
-	<!-- custom-theme -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<script type="text/javascript">
-		addEventListener("load", function() {
-			setTimeout(hideURLbar, 0);
-		}, false);
-		function hideURLbar(){
-			window.scrollTo(0,1);
-		}
-	</script>
-	<script type="text/javascript" src="/assets/lib/jquery/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="../../assets/lib/jquery/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="./login.js"></script>
 	<link href="./login.css" rel="stylesheet" type="text/css"/>
 </head>
 
 <body class="bg">
 	<h1 class="title1 text-center">MyKingdom后台</h1>
 	<div class="container">
-		<form action="#" method="post">
+		<form action="javascript:loginCheck()">
 			<div class="form_login">
 				<div class="line">
-					<span>UserName</span>
+					<span>用户名</span>
 					<input type="text" id="username" class="input" placeholder="login username" required>
 					<div class="clear"></div>
 				</div>
 				<div class="line">
-					<span>Password</span>
+					<span>密码</span>
 					<input type="password" id="password" class="input" placeholder="login password" required>
 					<div class="clear"></div>
 				</div>
 				<div>
-					<span>Code</span>
-					<input type="text" id="code" class="input" placeholder="code" required>
+					<span>验证码</span>
+					<input type="text" id="code" class="input" placeholder="code" style="width:33%" required>
+					<span style="border: 0px" class="code text-center" id="checkCode" onclick="createCode()"></span>
 					<div class="clear"></div>
 				</div>
 			</div>
