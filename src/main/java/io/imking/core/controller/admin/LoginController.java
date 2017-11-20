@@ -4,6 +4,7 @@ import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.sql.DataSource;
 
 import org.jboss.logging.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -32,9 +33,12 @@ import io.imking.core.vo.RestResponse;
 public class LoginController {
 
     private static final Logger logger = Logger.getLogger(LoginController.class);
-    
+
     @Autowired
     private UserService userService;
+
+    @Autowired
+    private DataSource dataSource;
 
     @RequestMapping(value = "/login", method = RequestMethod.POST,
             consumes = MediaType.APPLICATION_JSON_UTF8_VALUE,
@@ -46,6 +50,7 @@ public class LoginController {
         String username = params != null && params.containsKey("username") ? (String) params.get("username") : null;
         String password = params != null && params.containsKey("password") ? (String) params.get("password") : null;
         RestResponse result = null;
+        System.out.println(dataSource);
 
 
         System.out.println(username + "   " + password);
