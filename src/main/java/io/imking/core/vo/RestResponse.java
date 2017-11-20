@@ -1,4 +1,4 @@
-package io.imking.admin.vo;
+package io.imking.core.vo;
 
 import java.io.Serializable;
 import java.net.HttpURLConnection;

@@ -1,4 +1,4 @@
-package io.imking.admin.controller;
+package io.imking.core.controller.admin;
 
 import java.util.Map;
 
@@ -16,10 +16,10 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import io.imking.admin.service.UserService;
-import io.imking.admin.vo.RestResponse;
 import io.imking.core.domain.Result;
 import io.imking.core.domain.ResultEnum;
+import io.imking.core.service.UserService;
+import io.imking.core.vo.RestResponse;
 
 /**
  * Desc: 登陆相关的入口
