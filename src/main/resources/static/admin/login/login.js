@@ -41,19 +41,16 @@ function login() {
 			'password' : $('#password').val()
 		}),
 		success : function(rs) {
-			createCode();
-			// if (rs && rs.status == 200) {
-			// var data = rs.data;
-			// localStorage.setItem("rspm.local", JSON.stringify(data));
-			// $('#loginModal').modal("hide");
-			// toastr.success($.i18n.prop('i18n_web_loginSuccess'))
-			// setUser();
-			// } else {
-			// toastr.info($.i18n.prop('i18n_web_loginError'));
-			// }
+			if (rs && rs.status == 200) {
+				alert("登录成功")
+				var data = rs.data;
+				localStorage.setItem("rspm.local", JSON.stringify(data));
+			} else {
+				alert(rs.message);
+			}
 		},
 		error : function() {
-			// toastr.error("network error, please check it");
+			alert("网络错误");
 		},
 		dataType : "json",
 		contentType : "application/json"

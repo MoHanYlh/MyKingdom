@@ -8,7 +8,7 @@ public class RestResponse implements Serializable {
 	private static final long serialVersionUID = 1L;
 	private static final int success = HttpURLConnection.HTTP_OK;
 	private static final int failure = HttpURLConnection.HTTP_INTERNAL_ERROR;
-	public static final int TOKEN_ERROR = HttpURLConnection.HTTP_FORBIDDEN;
+	public static final int error = HttpURLConnection.HTTP_FORBIDDEN;
 
 	private Integer status;
 	private String message;

@@ -20,7 +20,7 @@ public class MyBatisConfig implements TransactionManagementConfigurer {
     @Autowired
     DataSource dataSource;
 
-    @Bean(name = "sqlSessionFacctory")
+    @Bean(name = "sqlSessionFactory")
     public SqlSessionFactory sqlSessionFactoryBean() {
 
         SqlSessionFactoryBean bean = new SqlSessionFactoryBean();
